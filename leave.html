@@ -1,0 +1,220 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="leave.css">
+    <title>Leave Application</title>
+    <script src="leave.js"></script>
+</head>
+
+<body >
+   
+    <div class="container">
+        
+        <div class="header">
+            <h1>Leave form</h1></div>
+        <form class="form" action="leave.php" method="POST" enctype="multipart/form-data">
+
+            <div class="con1">
+                    <div class="filed">
+                        <label>School of:</label><br>
+                        <select id="program" name="school">
+                            <option value="default" disabled selected>Select an option</option>
+                            <options>Engineering</option>
+                            <option>Agriculture</option>
+                            <option>M-tech</option>
+                            <option>M.sc</option>
+                            <option>B.sc</option>
+                        </select><br>
+                        
+                        <small>Error Message</small>
+                    </div>
+                    
+                    <div class="filed1">
+                        <label>Program:</label><br>
+                        <select id="program1" name="program1" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option >B-tech</option>
+                            <option >B-sc</option>
+                        </select><br>
+                        
+                        <small>Error Message</small>
+                    </div>
+                    <div class="filed2">
+                        <label>Branch:</label><br>
+                        <select id="program2" name="branch" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option >CSE</option>
+                            <option >CSE-DS</option>
+                            <option >CSE-AIML</option>
+                            <option value>ECE</option>
+                            <option >EEE</option>
+                            <option >MECH</option>
+                        </select><br>
+                        
+                        <small>Error Message</small>
+                    </div>
+            </div>
+
+
+        
+            <div class="con2">
+                <div class="filed3">
+                    <label>Name of the student :</label><br>
+                    <input type="text" id="name" name="Name" placeholder="Enter your name" required><br>
+                    <small>Error Message</small>
+                </div>
+
+                <div class="filed4">
+                    <label>Roll no:</label>
+                    <input type="text" id="roll" name="rollno" placeholder="Enter your roll no" required><br>
+                    <small>Error Message</small>
+                </div>
+
+                <div class="filed5">
+                    <label >% of Attendance:</label>
+                    <input type="text" id="attendance" name="attendance" placeholder="Enter your attendance" required><br>
+                    <small>Error Message</small>
+                </div>
+                <div class="filed6">
+                    <label>Section:</label>
+                    <select id="sec" name="section" required>
+                        <option value="" disabled selected>Select an option</option>
+                        <option >A</option>
+                        <option >B</option>
+                        <option >C</option>
+                        <option >D</option>
+                        <option >E</option>
+                        <option >F</option>
+                        <option >G</option>
+                        <option >H</option>
+                        <option >I</option>
+                        <option >J</option>
+                    </select><br>
+                    <small>Error Message</small>
+                </div>
+             </div>
+
+            <div class="con3">
+                <div class="filed8">
+                    <label>First day of absence: </label>
+                    <input type="date" name="fdate" id="fdate" oninput="calDays()" required><br>
+                    <small>Error Message</small>
+                </div>
+            
+                <div class="filed9">
+                    <label>Last day of absence: </label>
+                    <input type="date" name="tdate" id="tdate" oninput="calDays()" required><br>
+                    <small>Error Message</small>
+                </div>
+                <div class="filed2">
+                    <label>Apply date :</label>
+                    <input type="date" name="applyDate" id="applyDate" required><br>
+                    
+                    <small>Error Message</small>
+                </div>
+                <div class="filed10">
+                    <label>No of days :</label>
+                    <input type="text" name="days" id="days"><br>
+                    <small>Error Message</small>
+                </div>
+
+            </div>
+            
+
+            
+            <div class="filed11">
+            <h4>Whether going out of gunupur:</h4>
+            <input type="radio" id="yes" name="outof" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="outof" value="no">
+                <label for="no">No</label>
+                <br>
+            <small>Error Message</small>
+            </div>
+
+            <div class="filed12">
+            <label>Whether parent informes about the leave (By the student):</label>
+            <input type="radio" id="yes" name="inform" value="yes" >
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="inform" value="no">
+                <label for="no">No</label>
+                <br>
+            <small>Error Message</small>
+            </div>
+
+
+            <div class="con4">
+                <div class="filed13">
+                <label>Student phone number:</label>
+                <input type="number" name="sphone" id="sphone"><br>
+                <small>Error Message</small>
+                </div>
+
+
+        
+                <div class="filed14">
+                    <label>Parent's phone number:</label>
+                    <input type="number" name="pphone"  id="pphone"><br>
+                    <small>Error Message</small>
+                </div>
+            </div>
+
+
+            <div class="filed15">
+            <label>Student email:</label>
+            <input type="email"  name="email" id="email"><br>
+            <small>Error Message</small>
+            </div>
+        
+            
+
+            
+            <div class="filed17">
+            <label>Reason for applying leave:</label>
+            <textarea name="Reason" id="text" cols="30" rows="10"></textarea><br>
+            <small>Error Message</small>
+            </div>
+
+            <div class="filed18">
+            <label>Name of the class teacher :</label>
+            <input type="text" name="cname" id="cname"><br>
+            <small>Error Message</small>
+            </div>
+
+            <div class="filed19">
+            <label>Postal address where He/she going:</label>
+            <input type="text" name="address" id="address"><br>
+            <small>Error Message</small>
+            </div>
+
+            
+            <button id="btn ">Submit</button>
+        
+            
+            <div class="con5">
+            <label>Apporval of proctor:</label>
+            <p id="p-approval">Not approved</p>
+        
+
+                <br>
+            <label>Apporval of Class teacher:</label>
+            <p id="c-approval">Not Approved</p>
+                <br>
+            <label>Apporval of HOD:</label>
+            <p id="h-approval">Not Approved</p>
+            </div>
+
+
+
+
+
+
+
+
+        </form>
+    </div>
+</body>
+</html>
